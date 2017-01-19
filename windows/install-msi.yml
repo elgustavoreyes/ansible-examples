@@ -16,6 +16,7 @@
     - name: Install Package
       win_package: 
         path: 'C:\Users\Administrator\Downloads\httpd-2.2.25-win32-x86-no_ssl.msi'
-        state: present        
+        state: present
+        product_id: '{85262A06-2D8C-4BC1-B6ED-5A705D09CFFC}'
       when: result.stat.exists == True
         
