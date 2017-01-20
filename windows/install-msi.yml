@@ -7,16 +7,10 @@
       win_get_url:
         url: 'https://archive.apache.org/dist/httpd/binaries/win32/httpd-2.2.25-win32-x86-no_ssl.msi'
         dest: 'C:\Users\Administrator\Downloads\httpd-2.2.25-win32-x86-no_ssl.msi'
-    
-    - name: Check if download is done
-      win_stat:
-        path: 'C:\Users\Administrator\Downloads\httpd-2.2.25-win32-x86-no_ssl.msi'
-      register: result
-    
+   
     - name: Install Package
       win_package: 
         path: 'C:\Users\Administrator\Downloads\httpd-2.2.25-win32-x86-no_ssl.msi'
         state: present
-        product_id: '{85262A06-2D8C-4BC1-B6ED-5A705D09CFFC}'
-      when: result.stat.exists == True
+        product_id: '{85262A06-2D8C-4BC1-B6ED-5A705D09CFFC}' 
         
