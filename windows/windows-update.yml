@@ -1,0 +1,12 @@
+---
+- name: Actualiza Windows
+  hosts: all
+   
+  tasks:    
+    - name: Actualiza Windows
+      win_updates: 
+        log_path: 'C:\Users\Administrator\Downloads\ansible_wu.txt'
+      register: update_result  
+    - name: Reinicia Sistema si es necesario
+      win_reboot:
+      when: update_result.reboot_required
