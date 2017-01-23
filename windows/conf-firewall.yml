@@ -5,9 +5,9 @@
   tasks:    
     - name: Configura Firewall Windows 
       win_firewall_rule:
-        name: smtp
-        enable: no
-        state: absent
+        name: Ansible SMTP
+        enable: yes
+        state: present
         localport: 25
         action: allow
         direction: In
