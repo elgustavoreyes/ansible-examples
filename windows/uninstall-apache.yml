@@ -11,6 +11,4 @@
     - name: Elimina archivo instalación
       win_file:
         path: 'C:\Users\Administrator\Downloads\httpd-2.2.25-win32-x86-no_ssl.msi'
-        state: absent
-    - name: Reinicia Sistema
-      win_reboot:        
+        state: absent       
