@@ -6,8 +6,8 @@
     - name: Configura Firewall Windows 
       win_firewall_rule:
         name: Ansible SMTP
-        enable: no
-        state: absent
+        enable: yes
+        state: present
         localport: 25
         action: allow
         direction: In
