@@ -1,0 +1,19 @@
+---
+# This playbook installs and enables IIS on Windows hosts
+
+- name: Habilita IIS, reinicia y deploya sitio web
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Instala IIS
+      win_feature:
+        name: "Web-Server"
+        state: present
+        restart: yes
+        include_sub_features: yes
+        include_management_tools: yes
+        
+    - name: Deploya Web desde GitHub
+      win_get_url:
+        url: 'https://raw.githubusercontent.com/thisdavejohnson/mywebapp/master/index.html'
+        dest: 'C:\inetpub\wwwroot\ansible.html'
