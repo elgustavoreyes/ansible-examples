@@ -6,8 +6,8 @@
     - name: Configura Firewall Windows 
       win_firewall_rule:
         name: smtp
-        enable: yes
-        state: present
+        enable: no
+        state: absent
         localport: 25
         action: allow
         direction: In
