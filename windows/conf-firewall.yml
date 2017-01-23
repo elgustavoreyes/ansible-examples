@@ -11,4 +11,4 @@
         localport: 25
         action: allow
         direction: In
-        Protocol: TCP        
+        protocol: TCP        
