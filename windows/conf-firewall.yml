@@ -1,0 +1,14 @@
+---
+- name: Abre puerto 25
+  hosts: all
+   
+  tasks:    
+    - name: Configura Firewall Windows 
+      win_firewall_rule:
+        name: smtp
+        enable: yes
+        state: present
+        localport: 25
+        action: allow
+        direction: In
+        Protocol: TCP        
