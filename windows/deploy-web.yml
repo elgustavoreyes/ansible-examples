@@ -7,15 +7,15 @@
     - name: Instala IIS
       win_feature:
         name: "Web-Server"
-        state: present
+        state: absent
         restart: no
         include_sub_features: yes
         include_management_tools: yes
               
-    - name: Deploya Web desde GitHub
-      win_get_url:
-        url: 'https://raw.githubusercontent.com/elgustavoreyes/ansible-examples/master/windows/index.html'
-        dest: 'C:\inetpub\wwwroot\ansible.html'
+    #- name: Deploya Web desde GitHub
+     # win_get_url:
+      #  url: 'https://raw.githubusercontent.com/elgustavoreyes/ansible-examples/master/windows/index.html'
+       # dest: 'C:\inetpub\wwwroot\ansible.html'
         
-    - name: Reinicia Server
-      win_reboot:
+    #- name: Reinicia Server
+     # win_reboot:
