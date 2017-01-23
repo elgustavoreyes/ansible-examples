@@ -14,7 +14,7 @@
               
     - name: Deploya Web desde GitHub
       win_get_url:
-        url: 'https://raw.githubusercontent.com/thisdavejohnson/mywebapp/master/index.html'
+        url: 'https://raw.githubusercontent.com/elgustavoreyes/ansible-examples/master/windows/index.html'
         dest: 'C:\inetpub\wwwroot\ansible.html'
         
     - name: Reinicia Server
